@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Shubh Deepawali 2025 ✨</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:wght@700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            background: linear-gradient(45deg, #ff7e5f, #feb47b, #ffeda7, #97e09b, #84cdee);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            justify-content: space-between;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .fireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+            perspective: 1000px;
+        }
+
+        .ad-container {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .countdown {
+            font-size: 1.5em;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            animation: slideInDown 1s ease-out;
+        }
+
+        @keyframes slideInDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .main-heading {
+            font-size: 4em;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ff8c00, 0 0 40px #ff8c00;
+            animation: rotate3D 8s linear infinite, glow 2s ease-in-out infinite alternate;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes rotate3D {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ff8c00, 0 0 40px #ff8c00; }
+            to { text-shadow: 0 0 20px #ffd700, 0 0 30px #ff8c00, 0 0 40px #ff8c00, 0 0 50px #ff4500; }
+        }
+
+        .sub-heading {
+            font-size: 1.2em;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .feature-box {
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            animation: zoomIn 1s ease-out;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .ringtone-btn, .share-btn {
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            margin-top: 15px;
+        }
+
+        .ringtone-btn:hover, .share-btn:hover {
+            background-color: #ff4500;
+            transform: scale(1.1);
+        }
+
+        .name-input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 20px;
+            border: 2px solid #ffd700;
+            text-align: center;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+
+        footer {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ad-container">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '425780f5c6bd1298be1cc15fb514a609',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/425780f5c6bd1298be1cc15fb514a609/invoke.js"></script>
+    </div>
+
+    <div class="container">
+        <div id="countdown" class="countdown">🎆 Diwali Countdown: Loading...</div>
+        <h1 class="main-heading">✨ शुभ दीपावली ✨</h1>
+        <p class="sub-heading">आपको और आपके परिवार को दीपावली की हार्दिक शुभकामनाएं 🌟</p>
+
+        <div class="feature-box">
+            <audio id="diwaliRingtone" src="diwali_ringtone.mp3" preload="auto"></audio>
+            <button id="playRingtoneBtn" class="ringtone-btn">🎶 Play Diwali Ringtone</button>
+            
+            <input type="text" id="userName" class="name-input" placeholder="अपना नाम लिखें...">
+            
+            <button id="shareBtn" class="share-btn">💌 WhatsApp पर शुभकामना भेजें</button>
+        </div>
+    </div>
+    
+    <div class="ad-container">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '425780f5c6bd1298be1cc15fb514a609',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/425780f5c6bd1298be1cc15fb514a609/invoke.js"></script>
+    </div>
+
+    <canvas class="fireworks"></canvas>
+
+    <script>
+        // Set the date for Diwali 2025
+        const diwaliDate = new Date("Oct 21, 2025 00:00:00").getTime();
+
+        const countdownElement = document.getElementById("countdown");
+
+        const countdownFunction = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = diwaliDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = `🎆 Diwali Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s left`;
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                countdownElement.innerHTML = "🎉 Happy Diwali! 🎉";
+            }
+        }, 1000);
+
+        // Ringtone Player
+        const ringtone = document.getElementById("diwaliRingtone");
+        const playBtn = document.getElementById("playRingtoneBtn");
+        let isPlaying = false;
+
+        playBtn.addEventListener("click", () => {
+            if (isPlaying) {
+                ringtone.pause();
+                playBtn.textContent = "🎶 Play Diwali Ringtone";
+            } else {
+                ringtone.play();
+                playBtn.textContent = "⏸️ Pause Ringtone";
+            }
+            isPlaying = !isPlaying;
+        });
+        
+        ringtone.onended = function() {
+            isPlaying = false;
+            playBtn.textContent = "🎶 Play Diwali Ringtone";
+        };
+
+        // WhatsApp Share
+        const shareBtn = document.getElementById("shareBtn");
+        const userNameInput = document.getElementById("userName");
+
+        shareBtn.addEventListener("click", () => {
+            const name = userNameInput.value || "Your Friend";
+            const message = `✨ ${name} की ओर से आपको शुभ दीपावली की हार्दिक शुभकामनाएं ✨`;
+            const websiteLink = `देखें यहाँ 👉 ${window.location.href}`;
+            const fullMessage = encodeURIComponent(`${message}\n\n${websiteLink}`);
+            const whatsappUrl = `https://api.whatsapp.com/send?text=${fullMessage}`;
+            window.open(whatsappUrl, '_blank');
+        });
+        
+        // Fireworks Animation
+        const canvas = document.querySelector('.fireworks');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        let fireworks = [];
+
+        class Firework {
+            constructor(x, y, color) {
+                this.x = x;
+                this.y = y;
+                this.color = color;
+                this.particles = [];
+                for (let i = 0; i < 50; i++) {
+                    this.particles.push(new Particle(this.x, this.y, this.color));
+                }
+            }
+
+            update() {
+                this.particles.forEach(p => p.update());
+                this.particles = this.particles.filter(p => p.alpha > 0);
+            }
+
+            draw() {
+                this.particles.forEach(p => p.draw());
+            }
+        }
+
+        class Particle {
+            constructor(x, y, color) {
+                this.x = x;
+                this.y = y;
+                this.color = color;
+                this.velocity = {
+                    x: (Math.random() - 0.5) * 8,
+                    y: (Math.random() - 0.5) * 8
+                };
+                this.alpha = 1;
+                this.friction = 0.98;
+            }
+
+            update() {
+                this.velocity.x *= this.friction;
+                this.velocity.y *= this.friction;
+                this.x += this.velocity.x;
+                this.y += this.velocity.y;
+                this.alpha -= 0.02;
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, 2, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            if (Math.random() < 0.05) {
+                const x = Math.random() * canvas.width;
+                const y = Math.random() * canvas.height / 2;
+                const color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                fireworks.push(new Firework(x, y, color));
+            }
+            
+            fireworks.forEach((fw, index) => {
+                fw.update();
+                fw.draw();
+                if (fw.particles.length === 0) {
+                    fireworks.splice(index, 1);
+                }
+            });
+        }
+        
+        animate();
+        
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+    </script>
+</body>
+</html>
